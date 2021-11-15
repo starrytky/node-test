@@ -73,6 +73,7 @@ getJSON.onclick = function(){
     if(request.readyState === 4 && request.status === 200) {
       const json = JSON.parse(request.response)
       console.log(json)
+      userName.textContent = json.name;
     }
   }
   request.send();
